@@ -40,6 +40,7 @@ return {
 				"lua",
 				"dockerfile",
 				"gitignore",
+				"php",
 			},
 			incremental_selection = {
 				enable = true,

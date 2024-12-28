@@ -121,6 +121,7 @@ return {
 						"less",
 						"svelte",
 						"astro",
+						"blade",
 					},
 				})
 			end,
@@ -134,6 +135,15 @@ return {
 						"typescript",
 						"javascript",
 						"astro",
+					},
+				})
+			end,
+			["intelephense"] = function()
+				lspconfig["intelephense"].setup({
+					capabilities = capabilities,
+					filetypes = {
+						"blade",
+						"php",
 					},
 				})
 			end,

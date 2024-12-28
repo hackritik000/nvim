@@ -20,6 +20,7 @@ return {
 				graphql = { "prettier" },
 				liquid = { "prettier" },
 				astro = { "prettier" },
+				blade = { "blade-formatter" },
 				lua = { "stylua" },
 			},
 			format_on_save = {
