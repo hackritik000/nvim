@@ -38,6 +38,7 @@ return {
 				"emmet_ls",
 				"prismals",
 				"pyright",
+				"intelephense",
 			},
 		})
 
@@ -46,6 +47,7 @@ return {
 				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
 				"eslint_d", -- js linter
+				"blade-formatter",
 			},
 		})
 	end,

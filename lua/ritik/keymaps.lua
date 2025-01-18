@@ -3,9 +3,13 @@ vim.g.maplocalleader = "\\"
 
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
-map("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 
 map("n", "<C-c>", ":nohl<cr>", opts)
+
+-- Move to up and down in word wrap
+map("n", "j", "gj", opts)
+map("n", "k", "gk", opts)
+
 -- Remap pane navigation
 map("n", "<A-h>", "<C-w>h", opts)
 map("n", "<A-j>", "<C-w>j", opts)

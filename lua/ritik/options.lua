@@ -8,8 +8,15 @@ opt.tabstop = 4 -- 2 spaces for tabs (prettier default)
 opt.shiftwidth = 4 -- 2 spaces for indent width
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
+opt.smartindent = false
 
-opt.wrap = false
+opt.wrap = true
+opt.linebreak = true
+opt.showbreak = "↪"
+opt.breakindent = true
+
+opt.scrolloff = 8 -- is one of my fav
+opt.sidescrolloff = 8
 
 -- search settings
 opt.ignorecase = true -- ignore case when searching
