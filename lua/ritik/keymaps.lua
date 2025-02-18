@@ -16,6 +16,15 @@ map("n", "<A-j>", "<C-w>j", opts)
 map("n", "<A-k>", "<C-w>k", opts)
 map("n", "<A-l>", "<C-w>l", opts)
 
+-- Correct Remap for Pane Resizing
+map("n", "(", "<C-w><", opts) -- Decrease width (shrink left)
+map("n", ")", "<C-w>>", opts) -- Increase width (expand right)
+-- -- Remap pane Resize
+-- map("n", "<C-H>", "<C-w>+", opts)
+-- map("n", "<C-J>", "<C-w>>", opts)
+-- map("n", "<C-K>", "<C-w><", opts)
+-- map("n", "<C-L>", "<C-w>-", opts)
+
 -- Move to previous/next
 map("n", "<S-h>", "<Cmd>BufferPrevious<CR>", opts)
 map("n", "<S-l>", "<Cmd>BufferNext<CR>", opts)

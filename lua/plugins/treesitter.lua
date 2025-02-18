@@ -6,21 +6,33 @@ return {
 		"windwp/nvim-ts-autotag",
 	},
 	config = function()
-		-- import nvim-treesitter plugin
+		-- Import nvim-treesitter plugin
 		local treesitter = require("nvim-treesitter.configs")
 
-		-- configure treesitter
-		treesitter.setup({ -- enable syntax highlighting
+		-- Add custom parser configuration for Blade
+		local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+		parser_config.blade = {
+			install_info = {
+				url = "https://github.com/EmranMR/tree-sitter-blade",
+				files = { "src/parser.c" },
+				branch = "main",
+			},
+			filetype = "blade",
+		}
+
+		-- Configure treesitter
+		treesitter.setup({
+			-- Enable syntax highlighting
 			highlight = {
 				enable = true,
 			},
-			-- enable indentation
+			-- Enable indentation
 			indent = { enable = true },
-			-- enable autotagging (w/ nvim-ts-autotag plugin)
+			-- Enable autotagging (w/ nvim-ts-autotag plugin)
 			autotag = {
 				enable = true,
 			},
-			-- ensure these language parsers are installed
+			-- Ensure these language parsers are installed
 			ensure_installed = {
 				"json",
 				"javascript",
@@ -41,6 +53,7 @@ return {
 				"dockerfile",
 				"gitignore",
 				"php",
+				"blade", -- Add Blade to the list
 			},
 			incremental_selection = {
 				enable = true,
