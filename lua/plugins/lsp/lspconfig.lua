@@ -142,6 +142,7 @@ return {
 				lspconfig["intelephense"].setup({
 					capabilities = capabilities,
 					filetypes = {
+						"blade.php",
 						"blade",
 						"php",
 					},
